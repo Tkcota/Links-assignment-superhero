@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  namespace :api do
+    get '/superheroes', to:'superheroes#index'
+    get '/superheroes', to: 'dishes#show' 
+    post '/superheroes', to: 'superheroes#create' 
+    put '/superheroes', to: 'superheroes#update' 
+    delete '/superheroes', to: 'superheroes#destroy'
+  end
+  end
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+
+
+
 end
