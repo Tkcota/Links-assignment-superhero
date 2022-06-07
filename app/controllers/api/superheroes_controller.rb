@@ -5,6 +5,11 @@ def index
   render json: superheroes
 end
 
+def show
+  @superhero = Superhero.find(params[:id])
+  render json: @superhero
+end
+
 def create 
   @superhero = Superhero.new(superhero_params)
   if(@superhero.save)
