@@ -6,9 +6,12 @@ Rails.application.routes.draw do
     put '/superheroes', to: 'superheroes#update' 
     delete '/superheroes', to: 'superheroes#destroy'
   end
-  end
 
 
 
 
+
+
+
+  
 end
