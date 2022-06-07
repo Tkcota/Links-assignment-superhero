@@ -13,6 +13,15 @@ def create
    # render json:{ @superhero.errors.full_messages,status:422}
  end
 end
+
+def destroy
+  # render json: @superhero.destroy
+ @superheroes = Superhero.find(params[:id])
+ if @superheroes.destroy
+  render json: @superheroes
+ else
+ end
+end
   
 
 

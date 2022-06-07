@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     get '/superheroes', to:'superheroes#index'
-    get '/superheroes', to: 'superheroes#show' 
+    get '/superheroes/:id', to: 'superheroes#show' 
     post '/superheroes', to: 'superheroes#create' 
-    put '/superheroes', to: 'superheroes#update' 
-    delete '/superheroes', to: 'superheroes#destroy'
+    put '/superheroes/:id', to: 'superheroes#update' 
+    delete '/superheroes/:id', to: 'superheroes#destroy'
   end
 
 
