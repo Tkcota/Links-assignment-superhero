@@ -14,6 +14,14 @@ def create
  end
 end
 
+def update
+  @superheroes = Superhero.find(params[:id])
+  if @superheroes.update(superhero_params)
+    render json: @superheroes
+  else
+  end
+end
+
 def destroy
   # render json: @superhero.destroy
  @superheroes = Superhero.find(params[:id])
