@@ -6,4 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-Superhero.create(name:'Superman', power:'Super Strength')
+require 'faker'
+10.times do
+Superhero.create(name:Faker::Superhero.name, power:Faker::Superhero.power)
+end
