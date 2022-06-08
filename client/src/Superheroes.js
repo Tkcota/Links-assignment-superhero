@@ -54,11 +54,10 @@ function Superheroes() {
     }
     return superheroes.map((d) => {
       return (
-        <div key={d.id} style={{ margin: "20px", border: "1px solid" }}>
+        <div key={d.id} className="super">
           <h1>
-            {d.name}: ${d.price}
+            {d.name}: {d.power}
           </h1>
-          <p>{d.description}</p>
           <button onClick={() => deleteSuperhero(d.id)}>delete</button>
           <UpdateSuperheroForm {...d} updateSuperhero={updateSuperhero} />
         </div>

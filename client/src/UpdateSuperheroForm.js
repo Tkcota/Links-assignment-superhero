@@ -3,7 +3,7 @@ import { useState } from "react"
 
 const UpdateSuperheroForm = (props)=>{
     const [name, setName] = useState(props.name)
-    const [power, setPower] = useState(props.Power)
+    const [power, setPower] = useState(props.power)
 
 
     const handleSubmit = async(e)=>{
@@ -11,7 +11,6 @@ const UpdateSuperheroForm = (props)=>{
         try{
           let res = await axios.put(`/api/superheroes/${props.id}`,{name, power})
           console.log(res)
-          // res.data is the update superhero
           props.updateSuperhero(res.data)
         } catch(err){
           console.log(err)
@@ -25,7 +24,8 @@ const UpdateSuperheroForm = (props)=>{
                 <p>name</p>
                 <input value={name} onChange={(e)=>setName(e.target.value)}/>
                 <p>power</p>
-                <input type='string' value={power} onChange={(e)=>setPower(e.target.value)}/>
+                <input value={power} onChange={(e)=>setPower(e.target.value)}/>
+                <button>submit</button>
             </form>
         </div>
     )

@@ -13,5 +13,5 @@ end
 
 require 'faker'
 10.times do
-Movie.create(name:Faker::Movie.title, power:Faker::Movie.quote)
+Movie.create(title:Faker::Movie.title, quote:Faker::Movie.quote)
 end

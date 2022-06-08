@@ -1,5 +1,4 @@
 class Api::MoviesController < ApplicationController
-  class Api::moviesController < ApplicationController
     before_action :set_movie, only:[:show, :update, :destroy]
     
     def index 
@@ -45,4 +44,3 @@ class Api::MoviesController < ApplicationController
         params.require(:Movie).permit(:title,:quote)
       end
     end
-end

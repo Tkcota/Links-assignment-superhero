@@ -35,7 +35,7 @@ const MoviesForm = ()=>{
 
     }
     return (
-        <div className="component">
+        <div className="super">
             <h1>{id ? "Edit" :"New"} Movie</h1>
             <form onSubmit={handleSubmit}>
                 <p>title</p>

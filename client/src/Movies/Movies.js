@@ -33,7 +33,7 @@ const Movies = ()=>{
     return (
         <div className="component">
             <h1>Movies</h1>
-            {renderMovies()}
+            <div className="super">{renderMovies()}</div>
         </div>
     )
 }
