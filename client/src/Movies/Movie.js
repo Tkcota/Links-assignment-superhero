@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom"
 
-const Movie = ({id, title, quote})=>{
+const Movie = ({id, title, quote, deleteMovie})=>{
     return (
         <div>
           <p>id:{id}</p>
           <p>title:{title}</p>
           <p>quote:{quote}</p>
-          <button>delete</button>
+          <button onClick={()=>{deleteMovie(id)}}>Delete</button>
           <Link to={`/Movies/edit/${id}`}>update</Link>
         </div>
     )
