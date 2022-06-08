@@ -20,7 +20,7 @@ const UpdateSuperheroForm = (props)=>{
     }
     return (
         <div>
-            <h1>Form Yo</h1>
+            <h1>Hero Form</h1>
             <form onSubmit={handleSubmit}>
                 <p>name</p>
                 <input value={name} onChange={(e)=>setName(e.target.value)}/>

@@ -8,7 +8,6 @@ function Superheroes() {
   const [superheroes, setSuperheroes] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [name, setName] = useState("asdfasdf");
 
   useEffect(() => {
     getSuperheroes();
@@ -35,7 +34,7 @@ function Superheroes() {
     try {
       let res = await axios.delete(`/api/superheroes/${id}`);
       let newSuperheroes = superheroes.filter((d) => d.id !== res.data.id);
-      setSuperheroes(newsuperheroes);
+      setSuperheroes(newSuperheroes);
     } catch (err) {
       alert("err occured");
     }

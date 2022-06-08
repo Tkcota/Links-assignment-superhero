@@ -23,7 +23,7 @@ const Movies = ()=>{
 
      const renderMovies = ()=>{
          if(loading){
-             return <p>loading UI HERE</p>
+             return <p>Loading Stuff</p>
          }
 
          return movies.map(t=> <Movie key={t.id} {...t}/>)
