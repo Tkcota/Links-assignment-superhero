@@ -10,10 +10,10 @@ def show
   render json: @superhero
 end
 
-def create 
-  superhero = Superhero.new(superhero_params)
-  if(@uperhero.save)
-    render json: superhero
+def create
+  @superhero = Superhero.new(superhero_params)
+  if @superhero.save
+    render json: @superhero
   else
    # render json:{ @superhero.errors.full_messages,status:422}
  end
@@ -43,6 +43,6 @@ private
   end
 
   def superhero_params 
-    params.require(:Superhero).permit(:name,:power)
+    params.require(:superhero).permit(:name,:power)
   end
 end
