@@ -10,3 +10,8 @@ require 'faker'
 10.times do
 Superhero.create(name:Faker::Superhero.name, power:Faker::Superhero.power)
 end
+
+require 'faker'
+10.times do
+Movie.create(name:Faker::Movie.title, power:Faker::Movie.quote)
+end
