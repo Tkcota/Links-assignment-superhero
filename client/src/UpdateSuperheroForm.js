@@ -3,8 +3,8 @@ import { useState } from "react"
 
 const UpdateSuperheroForm = (props)=>{
     const [name, setName] = useState(props.name)
-    const [price, setPrice] = useState(props.price)
-    const [description, setDescription] = useState(props.description)
+    const [power, setPower] = useState(props.Power)
+
 
     const handleSubmit = async(e)=>{
         e.preventDefault()
@@ -24,11 +24,8 @@ const UpdateSuperheroForm = (props)=>{
             <form onSubmit={handleSubmit}>
                 <p>name</p>
                 <input value={name} onChange={(e)=>setName(e.target.value)}/>
-                <p>price</p>
-                <input type='string' value={price} onChange={(e)=>setPrice(e.target.value)}/>
-                <p>description</p>
-                <input value={description} onChange={(e)=>setDescription(e.target.value)}/>
-                <button>submit</button>
+                <p>power</p>
+                <input type='string' value={power} onChange={(e)=>setPower(e.target.value)}/>
             </form>
         </div>
     )
