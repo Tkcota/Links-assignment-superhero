@@ -27,9 +27,11 @@ const MoviesForm = ()=>{
     const handleSubmit = (e)=>{
         e.preventDefault()
         if(id){
+            await axios.put(`/api/movies${id}`,{title, quote})
             navigate('/movies')
 
         } else{
+            await axios.put("/api/movies",{title, quote})
             navigate('/movies')
         }
 
