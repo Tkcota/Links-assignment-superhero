@@ -7,7 +7,7 @@ const Movie = ({id, title, quote, deleteMovie})=>{
           <p>title:{title}</p>
           <p>quote:{quote}</p>
           <button onClick={()=>{deleteMovie(id)}}>Delete</button>
-          <Link to={`/Movies/edit/${id}`}>update</Link>
+          <button><Link to={`/MovieUpdate/edit/${id}`}>update</Link></button>
         </div>
     )
 }

@@ -11,8 +11,8 @@ class Api::MoviesController < ApplicationController
     end
     
     def create 
-      movie = Movie.new(movie_params)
-      if(@uperhero.save)
+      @movie = Movie.new(movie_params)
+      if(@movie.save)
         render json: movie
       else
      end

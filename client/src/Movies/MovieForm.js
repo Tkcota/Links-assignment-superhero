@@ -24,14 +24,14 @@ const MoviesForm = ()=>{
         }
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
         e.preventDefault()
         if(id){
             await axios.put(`/api/movies${id}`,{title, quote})
             navigate('/movies')
 
         } else{
-            await axios.put("/api/movies",{title, quote})
+            await axios.post("/api/movies",{title, quote})
             navigate('/movies')
         }
 
@@ -44,7 +44,7 @@ const MoviesForm = ()=>{
                 <input value={title} onChange={(e)=> setTitle(e.target.value)} />
                 <p>quote</p>
                 <input value={quote} onChange={(e)=> setQuote(e.target.value)} />
-                <button> {id ? "update" :"create"}</button>
+                <button> {id ? "update" : "create"}</button>
             </form>
         </div>
     )
